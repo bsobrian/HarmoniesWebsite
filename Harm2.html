@@ -202,17 +202,23 @@
 
 
   
-       function startTextSequence() {
-           currentText = 1;
-           document.querySelectorAll('.p-color').forEach(el => {
-               el.classList.remove('visible');
-               el.style.display = 'none';
-           });
-           document.getElementById('replay-button').style.display = 'none';
-           const firstText = document.getElementById('text1');
-           fadeIn(firstText);
-           interval = setInterval(switchText, 6000); // Adjust time as needed
-       }
+    function startTextSequence() {
+        currentText = 1;
+        document.querySelectorAll('.p-color').forEach(el => {
+            el.classList.remove('visible');
+            el.style.display = 'none';
+        });
+        document.getElementById('replay-button').style.display = 'none';
+        const firstText = document.getElementById('text1');
+        fadeIn(firstText);
+
+        // Short interval for the first text
+        setTimeout(() => {
+            switchText();
+            // Use the regular interval for subsequent texts
+            interval = setInterval(switchText, 5000); // Adjust time as needed
+        }, 1025); // Shorter time for the first text only
+    }
   
        function replayTexts() {
            clearInterval(interval);
