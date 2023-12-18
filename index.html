@@ -79,6 +79,32 @@
             left: 10px;
             color: white;
         }
+
+                @media (max-width: 768px) {
+            h1 {
+                font-size: 24px; /* Smaller font size for mobile */
+            }
+            p {
+                font-size: 14px; /* Smaller font size for mobile */
+            }
+            .form-container input[type="password"], .Codepassword input[type="submit"] {
+                width: 90%; /* Full width on mobile */
+                margin: 10px 0; /* Increase margin for better spacing */
+            }
+            /* Adjust other elements as necessary */
+        }
+
+        /* Additional global styles for better mobile viewing */
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        /* Ensure images and backgrounds scale properly */
+        img, .background-image {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
