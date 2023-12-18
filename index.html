@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Document Title</title>
     <style>
-         .container {
+        .container {
             display: flex;
             align-items: center;
-            justify-content: center
+            justify-content: center;
         }
+
         body {
             background-image: url('background.jpg');
             background-repeat: no-repeat;
@@ -25,7 +26,6 @@
             text-decoration: solid;
             text-shadow: 3px 3px 3px rgb(255, 0, 0);
         }
-        
 
         h1 {
             position: relative;
@@ -71,54 +71,60 @@
             padding: 5px 10px;
             cursor: pointer;
         }
+
+        /* Add a new style for demonstration purposes */
+        .scroll-message {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            color: white;
+        }
     </style>
-    </head>
-    <body>
+</head>
+<body>
+    <h1 style="font-size: 50px">Hello Harmony...</h1>
+    <p style="font-size: 30px">I hope you've been having a wonderful day!!!!</p>
+    <p style="font-size: 30px">Below there is a place for you to enter a Super Secret Code</p>
+    <p style="font-size: 30px">The code has been hidden somewhere in your invitation. Please find it and enter it below</p>
+    <p style="font-size: 30px">Love ya lots...Bri and Niah</p>
 
-        
-        
-
-        <h1 style ="font-size: 50px">Hello Harmony...</h1>
-        <p style ="font-size: 30px ">I hope you've been having a wonderful day!!!!</p>
-        <p style ="font-size: 30px" >Below there is a place for you to enter a Super Secret Code</p>
-        <p style ="font-size: 30px" >The code has been hidden somewhere in your invitation. Please find it and enter it below</p>
-        <p style ="font-size: 30px" >Love ya lots...Bri and Niah</p>
-
-        <form action="Harm2.html" method="post" class="form-container" onsubmit="return false;">
-            <div class="Codepassword">
-                <div class="form">
-                    <div class="input-group">
-                        <!-- Set placeholder text -->
-                        <input type="password" name="Codepassword" id="code" placeholder="Enter Code" required />
-                    </div>
-                    <input type="submit" value="submit" class="submit-btn" onclick="auth(); return false;" />
+    <form action="Harm2.html" method="post" class="form-container" onsubmit="return false;">
+        <div class="Codepassword">
+            <div class="form">
+                <div class="input-group">
+                    <input type="password" name="Codepassword" id="code" required />
                 </div>
+                <input type="submit" value="submit" class="submit-btn" onclick="auth(); return false;" />
             </div>
-        </form>
+        </div>
+    </form>
 
-        <script>
-            function auth() {
-                var code = document.getElementById("code").value;
-                var redirectPage;
+    <script>
+        function auth() {
+            var code = document.getElementById("code").value;
+            var redirectPage;
 
-                if(57123) {
-                    redirectPage = "Harm2.html"; 
-                } else {
-                    alert("Unsuccessful");
-                }
-                console.log("Code:", code);
+            if (57123) {
+                redirectPage = "Harm2.html";
+            } else {
+                alert("Unsuccessful");
+            }
+            console.log("Code:", code);
             console.log("Redirect Page:", redirectPage);
 
             window.location.assign(redirectPage);
             alert("Successful");
-            }
-            window.addEventListener('scroll', checkScroll);
-       document.addEventListener('DOMContentLoaded', () => {
-           // Optional: Start the animation immediately if the page is short
-           checkScroll();
-       });
-               
-        </script>
+        }
 
-    </body>
+        function checkScroll() {
+            console.log("Scrolling!");
+        }
+
+        window.addEventListener('scroll', checkScroll);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            checkScroll();
+        });
+    </script>
+</body>
 </html>
