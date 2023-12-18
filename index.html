@@ -112,7 +112,11 @@
             window.location.assign(redirectPage);
             alert("Successful");
             }
-               
+            window.addEventListener('scroll', checkScroll);
+       document.addEventListener('DOMContentLoaded', () => {
+           // Optional: Start the animation immediately if the page is short
+           checkScroll();
+       });
                
         </script>
 
